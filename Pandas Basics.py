@@ -9,11 +9,13 @@ df = pd.read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pok
 
 
 #1. Print top 5 rows
+```
 print(df.head(5))
-
+```
 #2.Printing column names
+```
 print(df.columns)
-
+```
 #3. Print All data from column name
 print (df['Name'])
 
