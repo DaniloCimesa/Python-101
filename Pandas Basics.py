@@ -9,13 +9,11 @@ df = pd.read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pok
 
 
 #1. Print top 5 rows
-```
 print(df.head(5))
-```
+
 #2.Printing column names
-```
 print(df.columns)
-```
+
 #3. Print All data from column name
 print (df['Name'])
 
@@ -27,7 +25,6 @@ print (df.Name)
 print (df[['Name','Type 1', 'HP']])
 
 #6. Print each row for specific ID
-
 print(df.iloc[2])
 print(df.iloc[2:4])
 
@@ -60,7 +57,6 @@ pd.set_option('display.width', 200)
 print(df.head(5))
 
 #12. Rearranging columns the way you want them to be with implementing show all columns from the previous excercise.
-
 df['Total']=df.iloc[:,4:10].sum(axis=1)
 cols = list(df.columns)
 pd.options.display.max_columns = 15
@@ -69,16 +65,12 @@ pd.set_option('display.width', 200)
 print(df)
 
 #13. Saving to csv, excel, notepad document.
-
 df.to_csv('modified.csv', index=False)
-
 df.to_excel('modified.xlsx', index=False)
-
 df.to_csv('modified.txt', index=False, sep='\t')
 
 
 #14. Filtering rows based on more than 1 condition (using And/Or), reseting index.
-
 pd.options.display.max_columns = 15
 pd.set_option('display.width', 200)
 new_df=df.loc[(df['Type 1']=='Grass') & (df['Type 2']=='Poison') & (df['HP']> 70)]
@@ -86,7 +78,6 @@ new_df=new_df.reset_index(drop=True)
 print(new_df)
 
 #15. Regex Filtering and changing column data(conditional formatting)
-
 pd.set_option('display.width', 200)
 df=df.loc[df['Name'].str.contains('^pi[a-z]*', flags=re.I, regex=True)]
 print(df)
@@ -112,10 +103,8 @@ print(df)
 
 #19. large dataframes
 for df in pd.read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pokemon_data.csv', chunksize=5):
-
 print("Chunk DF")
 print(df)
-
 
 new_df=pd.DataFrame(columns=df.columns)
 for df in pd.read_csv('https://raw.githubusercontent.com/KeithGalli/pandas/master/pokemon_data.csv', chunksize=5):
