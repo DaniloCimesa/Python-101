@@ -129,3 +129,42 @@ heredoc string --------> example
 '''
 
 print(string)
+
+#excercise14
+
+from datetime import date
+
+def date_difff(date1,date2):
+    date_diff=date2-date1
+    #print('Difference between two dates is:'+str(date_diff))
+    return date_diff.days
+
+date1=date(2024,2,7)
+date2=date(2024,7,7)
+
+print('Difference is: '+str(date_difff(date1,date2))+' days')
+
+#excercise15
+
+from math import pi
+
+def Volume():
+    r=input('Input radius of a sphere: ')
+    V=(4/3)*int(r)**3*pi
+    print(V)
+    
+Volume()
+
+#excercise 16
+
+def NumCheck():
+    a=input('Input number:')
+    b=17
+    c=int(a)
+    if c<b:
+        print(b-c)
+    else:
+        print(2*abs(c-b))
+
+#excercise17
+
