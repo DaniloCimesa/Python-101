@@ -293,6 +293,22 @@ print(color_list_1-color_list_2)
 
 #excercise30
 
+def triangle_area ():
+    height=input('Input height of a triangle:')
+    base=input('Input base of a triangle:')
+    try:
+        height1=int(height)
+        base1=int(base)
+        if isinstance(height1, int) and isinstance(base1, int):
+            area=height1*base1*0.5
+            return area
+        else:
+            return None
+    except ValueError:
+        print('Its not an integer!')
+        return None
+
+#excercise31
 import math
 
 a=60
@@ -309,7 +325,3 @@ def euclide_gcp(a,b):
         return a
     
 euclide_gcp(10,5)
-
-
-#excercise31
-
