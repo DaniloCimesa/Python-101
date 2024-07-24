@@ -246,3 +246,70 @@ def Vowel():
     else:
         return False
 
+#excercise25
+
+def is_in(narray,a):
+    if a in narray:
+        return True
+    else:
+        return False
+    
+
+#excercise26
+
+def print_histogram(counts):
+    string='*'
+    for count in counts:
+        print(string * count)
+
+#excercise27
+
+def list_concatenation(lista):
+    string1=''.join(map(str,lista))
+    return string1
+
+#excercise28
+
+numbers = [    
+    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
+    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
+    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+    958,743, 527
+]
+
+for i in numbers:
+    if i%2==0:
+        print(i)
+    elif i==237:
+        print(i)
+        break
+
+#excercise29
+
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+
+print(color_list_1-color_list_2)
+
+#excercise30
+
+import math
+
+a=60
+b=48
+
+gcd=math.gcd(a,b)
+print(gcd)
+
+#euclide Algorithm
+
+def euclide_gcp(a,b):
+    while b!=0:
+        a,b=b , a%b
+        return a
+    
+euclide_gcp(10,5)
+
+
+#excercise31
+
