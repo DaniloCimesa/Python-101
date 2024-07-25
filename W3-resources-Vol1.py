@@ -325,3 +325,39 @@ def euclide_gcp(a,b):
         return a
     
 euclide_gcp(10,5)
+
+#excercise32
+
+import math
+
+a=15
+b=20
+
+gcd=math.gcd(a,b)
+lcm=abs(a*b)/gcd
+print(lcm)
+
+#excercise33
+
+def sum_three (a,b,c):
+    if a==b or a==c or b==c:
+        return 0
+    else:
+        return a+b+c
+    
+
+#excercise34
+
+def sum_two(a,b):
+    if 15<=(a+b)<=20:
+        return 20
+    else:
+        return a+b
+    
+#excercise35
+
+def sum_ifs(a,b):
+    if a==b or a+b==5 or abs(a-b)==5:
+        return True
+    else:
+        return False
