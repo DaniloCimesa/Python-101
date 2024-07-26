@@ -361,3 +361,40 @@ def sum_ifs(a,b):
         return True
     else:
         return False
+    
+    
+#excercise36
+def sum_two_intgs(a,b):
+    if isinstance(a,int) and isinstance(b,int):
+        return a+b
+    else:
+        return "Its not intg"
+    
+#excercise37
+
+def Details ():
+    name='Danilo Cimesa'
+    age=27
+    residence='Mite Rankova 14, Pancevo, Srbija'
+    print('Name: {} \nAge: {} \nResidence: {}'.format(name, age, residence))
+
+#excercise38
+
+a,b=(4,3)
+result=a*a+2*(a*b)+b*b
+print('({} + {})^2 = {}'.format(a,b,result))
+
+#excercise39
+
+amount=10000
+interest=3.5
+period=7
+
+FutureValue=amount*(1+interest*0.01)**period
+print(FutureValue)
+
+#excercise40
+
+def distance (x1,y1,x2,y2):
+    d=(((x2-x1)**2+(y2-y1)**2))**(1/2)
+    return d
