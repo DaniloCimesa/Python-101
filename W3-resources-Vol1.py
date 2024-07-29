@@ -398,3 +398,53 @@ print(FutureValue)
 def distance (x1,y1,x2,y2):
     d=(((x2-x1)**2+(y2-y1)**2))**(1/2)
     return d
+
+#excercise41
+
+import os
+file_path=r'C:\Users\Danilo\OneDrive\Desktop\notepads\danilo.cimesa.txt'
+
+if os.path.exists(file_path):
+    True
+else:
+    False
+
+#excercise42
+
+import platform
+
+bit_mode = platform.architecture()[0]
+print(f"The Python shell is executing in {bit_mode} mode.")
+
+#excercise43
+
+import platform
+
+os_name = platform.system()
+platform_name = platform.platform()
+release_info = platform.release()
+
+print(f"OS Name: {os_name}")
+print(f"Platform: {platform_name}")
+print(f"Release: {release_info}")
+
+#excercise44
+
+import site
+
+site_packages = site.getsitepackages()
+print(site_packages)
+
+#excercise45
+#/
+
+#excercise46
+
+import inspect
+import os
+
+# Get the path of the currently executing file
+current_file_path = os.path.abspath(inspect.getfile(inspect.currentframe()))
+
+print("Current file path:", current_file_path)
+print("Current file name:", os.path.basename(current_file_path))
