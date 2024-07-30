@@ -443,8 +443,38 @@ print(site_packages)
 import inspect
 import os
 
-# Get the path of the currently executing file
 current_file_path = os.path.abspath(inspect.getfile(inspect.currentframe()))
 
 print("Current file path:", current_file_path)
 print("Current file name:", os.path.basename(current_file_path))
+
+#excercise47
+
+import multiprocessing
+
+# Get the number of CPUs available
+num_cpus = multiprocessing.cpu_count()
+
+print(f"Number of CPUs available: {num_cpus}")
+
+#excercise48
+
+num='234.567'
+print(num)
+num2=float(num)
+print(num2)
+print((int(num2)))
+
+#excercise49
+
+def list_files():
+    import os
+    directory=input('Input dir:')
+    files=os.listdir(directory)
+    print(files)
+    
+#excercise50
+
+for i in range(1,10):
+    print('*', end='')
+print("\n") 
