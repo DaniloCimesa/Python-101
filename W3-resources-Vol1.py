@@ -477,4 +477,39 @@ def list_files():
 
 for i in range(1,10):
     print('*', end='')
-print("\n") 
+print("\n")
+
+#excercise51
+#/
+
+#excercise52
+import sys
+
+def print_to_stderr(message):
+    print(message, file=sys.stderr)
+
+# Example usage
+print_to_stderr("This is an error message.")
+
+#excercise53
+import os
+
+print(os.environ)
+
+#excercise54
+
+import os
+
+user=os.getlogin()
+
+print(user)
+
+#excercise55
+
+import socket
+
+hostname = socket.gethostname()
+ip_addresses = socket.getaddrinfo(hostname, None)
+
+ip_add=[ip[-1][0] for ip in ip_addresses]
+print(ip_add)
