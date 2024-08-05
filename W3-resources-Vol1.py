@@ -513,3 +513,56 @@ ip_addresses = socket.getaddrinfo(hostname, None)
 
 ip_add=[ip[-1][0] for ip in ip_addresses]
 print(ip_add)
+
+#excercise56
+
+import os
+import shutil
+
+def get_console_size():
+    size = shutil.get_terminal_size((80, 20))  # Default values if size can't be determined
+    width = size.columns
+    height = size.lines
+    return width, height
+
+if __name__ == '__main__':
+    width, height = get_console_size()
+    print(f"Width: {width}")
+    print(f"Height: {height}")
+
+
+#excercise57
+import time
+
+def sample_method():
+    # Example method to measure execution time
+    total = 0
+    for i in range(1, 1000000):
+        total += i
+    return total
+
+begin_time=time.time()
+result=sample_method()
+end_time=time.time()
+exec=end_time-begin_time
+
+print(exec)
+
+#excercise58
+
+def sum_intg(y):
+    total=0
+    for i in range(1,y+1):
+        total+=i
+    return total
+
+#or
+def sum_intg2(y):
+    return (y*(y+1))//2
+
+#excercise59
+
+def height_convert():
+    height=input("Input height(feet, inches): ").split(',')
+    heightincm=str(float(height[0])*30.48 +float(height[1])*2.54)
+    print("Your height in cm is: "+heightincm)
