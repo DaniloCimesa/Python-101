@@ -566,3 +566,25 @@ def height_convert():
     height=input("Input height(feet, inches): ").split(',')
     heightincm=str(float(height[0])*30.48 +float(height[1])*2.54)
     print("Your height in cm is: "+heightincm)
+
+#excercise60
+import math
+
+a=float(input("1st side"))
+b=float(input("2nd side"))
+
+c=math.sqrt(a**2+b**2)
+print(c)
+
+#excercise62
+
+def time_convert():
+    days=int(input("Input number of days:"))
+    hours=int(input("Input number of hours:"))
+    minutes=int(input("Input number of minutes:"))
+    seconds=int(input("Input number of seconds:"))
+    
+    time_in_sec=days*24*60*60 + hours*60*60 + minutes*60 + seconds
+    
+    print("For: "+str(days)+" days, " + str(hours)+" hours, " + str(minutes)+" minutes and" +str(seconds)+" seconds")
+    print("Time in seconds is: "+str(time_in_sec))
