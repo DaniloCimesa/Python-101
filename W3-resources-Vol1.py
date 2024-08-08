@@ -588,3 +588,51 @@ def time_convert():
     
     print("For: "+str(days)+" days, " + str(hours)+" hours, " + str(minutes)+" minutes and" +str(seconds)+" seconds")
     print("Time in seconds is: "+str(time_in_sec))
+    
+#excercise63
+
+from pathlib import Path
+filepath=Path('while loop.py')
+abspath=filepath.resolve()
+print(abspath)
+
+#excercise64
+
+def create_mod_time():
+    import os
+    #import datetime
+    filename=input('Input file name:')
+    filepath=os.path.abspath(filename)
+    creation_time = os.path.getctime(filepath)
+    modification_time = os.path.getmtime(filepath)
+    return creation_time, modification_time
+
+create_mod_time()
+
+creation_time, modification_time=create_mod_time()
+
+print("creation time: "+str(datetime.datetime.fromtimestamp(creation_time)))
+print("modification time: "+str(datetime.datetime.fromtimestamp(modification_time)))
+
+#excercise65
+
+def seconds_convert(seconds):
+    seconds_to_minutes=seconds/60
+    minutes_to_hours=seconds_to_minutes/60
+    hours_to_days=minutes_to_hours/24
+    return seconds, seconds_to_minutes, minutes_to_hours, hours_to_days
+
+list1=seconds_convert(3600)
+
+for i in list1:
+    if i==list1[0]:
+        print(str(i)+' seconds')
+    elif i==list1[1]:
+        print(str(i)+' minutes')
+    elif i==list1[2]:
+        print(str(i)+' hour(s)')
+    else:
+        print(str(i)+' day(s)')
+        
+#excercise66
+
