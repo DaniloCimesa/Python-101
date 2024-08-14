@@ -635,4 +635,49 @@ for i in list1:
         print(str(i)+' day(s)')
         
 #excercise66
+#another file
 
+#excercise67
+
+def pressure_conversion():
+    pressure=input("Input pressure in kPa: ")
+    psi=float(pressure)*0.145038
+    mmhg=float(pressure)*7.50062
+    atm=float(pressure)*0.00986923
+
+    print(psi, "pound per square inch")
+    print(mmhg, "mm of mercury")
+    print(atm, "atm")
+    
+#excercise68
+
+def string_sum():
+    a=input('Input a number: ')
+    sumdig=sum(int(i) for i in a)
+    return sumdig
+
+#excercise69
+
+a=int(input())
+b=int(input())
+c=int(input())
+
+list1=[a,b,c]
+list1.sort()
+
+minimum=list1[0]
+middle=list1[1]
+maximum=list1[2]
+
+print(' Minimum is', minimum,'\n','Middle num is', middle,'\n', 'Maximum is', maximum)
+
+#excercise70
+
+import os
+
+directory="C:/Users\Danilo\OneDrive\Desktop\Python codes"
+files = [os.path.join(directory, file) for file in os.listdir(directory) if os.path.isfile(os.path.join(directory, file))]
+sorted_files = sorted(files, key=os.path.getmtime)
+
+for i in sorted_files:
+    print(i)
